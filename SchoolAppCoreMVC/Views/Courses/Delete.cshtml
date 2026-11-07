@@ -1,0 +1,9 @@
+@model SchoolAppCoreMVC.Models.Course
+@{ ViewData["Title"] = "Delete Course"; }
+<h2>Delete Course</h2>
+<p>Are you sure you want to delete course <strong>@Model.Title</strong>?</p>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="CourseID" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

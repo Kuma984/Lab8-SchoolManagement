@@ -1,0 +1,18 @@
+@model SchoolAppCoreMVC.Models.Course
+@{ ViewData["Title"] = "Edit Course"; }
+<h2>Edit Course</h2>
+<form asp-action="Edit">
+    <input type="hidden" asp-for="CourseID" />
+    <div class="mb-3"><label asp-for="Title" class="form-label"></label><input asp-for="Title" class="form-control" /></div>
+    <div class="mb-3"><label asp-for="Credits" class="form-label"></label><input asp-for="Credits" class="form-control" type="number" /></div>
+    <div class="mb-3">
+        <label class="form-label">Department</label>
+        <select asp-for="DepartmentID" class="form-select" asp-items="ViewBag.DepartmentID"></select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Instructor</label>
+        <select asp-for="InstructorID" class="form-select" asp-items="ViewBag.InstructorID"></select>
+    </div>
+    <button type="submit" class="btn btn-warning">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

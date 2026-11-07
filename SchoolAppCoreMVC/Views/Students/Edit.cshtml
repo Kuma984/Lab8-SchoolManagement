@@ -1,0 +1,11 @@
+@model SchoolAppCoreMVC.Models.Student
+@{ ViewData["Title"] = "Edit Student"; }
+<h2>Edit Student</h2>
+<form asp-action="Edit">
+    <input type="hidden" asp-for="StudentID" />
+    <div class="mb-3"><label asp-for="LastName" class="form-label"></label><input asp-for="LastName" class="form-control" /></div>
+    <div class="mb-3"><label asp-for="FirstName" class="form-label"></label><input asp-for="FirstName" class="form-control" /></div>
+    <div class="mb-3"><label asp-for="EnrollmentDate" class="form-label"></label><input asp-for="EnrollmentDate" class="form-control" type="date" /></div>
+    <button type="submit" class="btn btn-warning">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

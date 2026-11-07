@@ -1,0 +1,21 @@
+@model SchoolAppCoreMVC.Models.Course
+@{ ViewData["Title"] = "Create Course"; }
+<h2>Create Course</h2>
+<form asp-action="Create">
+    <div class="mb-3"><label asp-for="Title" class="form-label"></label><input asp-for="Title" class="form-control" /></div>
+    <div class="mb-3"><label asp-for="Credits" class="form-label"></label><input asp-for="Credits" class="form-control" type="number" /></div>
+    <div class="mb-3">
+        <label class="form-label">Department</label>
+        <select asp-for="DepartmentID" class="form-select" asp-items="ViewBag.DepartmentID">
+            <option value="">-- Select Department --</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Instructor</label>
+        <select asp-for="InstructorID" class="form-select" asp-items="ViewBag.InstructorID">
+            <option value="">-- Select Instructor --</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
