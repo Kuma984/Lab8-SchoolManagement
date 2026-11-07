@@ -1,0 +1,12 @@
+@page "{id:int}"
+@model SchoolAppCoreRazor.Pages.Students.EditModel
+@{ ViewData["Title"] = "Edit Student"; }
+<h2>Edit Student</h2>
+<form method="post">
+    <input type="hidden" asp-for="Student.StudentID" />
+    <div class="mb-3"><label class="form-label">Last Name</label><input asp-for="Student.LastName" class="form-control" /></div>
+    <div class="mb-3"><label class="form-label">First Name</label><input asp-for="Student.FirstName" class="form-control" /></div>
+    <div class="mb-3"><label class="form-label">Enrollment Date</label><input asp-for="Student.EnrollmentDate" class="form-control" type="date" /></div>
+    <button type="submit" class="btn btn-warning">Save</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancel</a>
+</form>

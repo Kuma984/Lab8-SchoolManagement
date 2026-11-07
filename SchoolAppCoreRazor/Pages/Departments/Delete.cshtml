@@ -1,0 +1,12 @@
+@page "{id:int}"
+@model SchoolAppCoreRazor.Pages.Departments.DeleteModel
+@{
+    ViewData["Title"] = "Delete Department";
+}
+<h2>Delete Department</h2>
+<p>Are you sure you want to delete <strong>@Model.Department.DepartmentName</strong>?</p>
+<form method="post">
+    <input type="hidden" asp-for="Department.DepartmentID" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancel</a>
+</form>
