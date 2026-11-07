@@ -4,7 +4,6 @@
 **Course:** Software Engineering – Lab 8  
 **Faculty:** Faculty of Information Technology – Ton Duc Thang University (TDTU)  
 **Instructor:** MSc. Pham Thai Ky Trung  
-**Submission Type:** Individual Work  
 
 ---
 
